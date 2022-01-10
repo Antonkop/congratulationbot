@@ -7,7 +7,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "person_entity")
-open class PersonEntity {
+class PersonEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: UUID? = null
@@ -20,6 +20,9 @@ open class PersonEntity {
 
     @Column(name = "birthday")
     val birthday: LocalDate? = null
+
+    @Column(name = "telegram_id", nullable = false)
+    val telegramId: String = ""
 
     @Column(name = "role")
     @Enumerated(EnumType.STRING)

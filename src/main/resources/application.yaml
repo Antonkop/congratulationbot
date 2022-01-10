@@ -1,3 +1,10 @@
 telegram:
-  id: ""
-  token: ""
+  id: "awesome_congratulations_bot"
+  token: "5041587361:AAEX6gkGDeYxpjhS1n4NJxlRUCscUqLov2U"
+  chatId: "135904858"
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    password: ${DB_PASSWORD:postgres}
+    username: ${DB_USERNAME:postgres}
