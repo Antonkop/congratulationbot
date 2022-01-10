@@ -10,17 +10,12 @@ import org.telegram.telegrambots.meta.api.objects.Update
 @Component
 class Bot(options: DefaultBotOptions?, private val telegramProperties: TelegramProperties) :
     TelegramLongPollingBot(options), TelegramClient {
-    override fun getBotToken(): String {
-        return telegramProperties.token
-    }
 
-    override fun getBotUsername(): String {
-        return telegramProperties.id
-    }
+    override fun getBotToken(): String = telegramProperties.token
 
-    override fun onUpdateReceived(p0: Update?) {
-        TODO("Not yet implemented")
-    }
+    override fun getBotUsername(): String = telegramProperties.id
+
+    override fun onUpdateReceived(p0: Update?) = TODO("Not yet implemented")
 
     override fun sendCongratulation(messageText: String, telegramId: String) {
         val message = SendMessage()
