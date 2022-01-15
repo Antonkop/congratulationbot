@@ -1,6 +1,7 @@
 package com.kop.congratulationbot.db
 
 import com.kop.congratulationbot.enums.Role
+import com.kop.congratulationbot.enums.Strategy
 import java.time.LocalDate
 import java.util.*
 import javax.persistence.*
@@ -27,4 +28,8 @@ class PersonEntity {
     @Column(name = "role")
     @Enumerated(EnumType.STRING)
     val role: Role? = null
+
+    @Column(name = "strategy")
+    @Enumerated(EnumType.STRING)
+    val strategy: Strategy? = null
 }
